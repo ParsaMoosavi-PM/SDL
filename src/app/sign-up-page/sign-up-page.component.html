@@ -1,0 +1,84 @@
+<app-header></app-header>
+<ion-content>
+  <form [formGroup]="userForm">
+  <ion-list>
+    <ion-item class="rounded-pill-input">
+      <ion-input
+        fill="solid"
+        label="کد ملی"
+        labelPlacement="floating"
+        placeholder="Enter text"
+        formControlName="codeMeli"
+      ></ion-input>
+    </ion-item>
+    <div class="error-container">
+      <ng-container *ngFor="let validation of validations.codeMeli">
+        <div class="error-message" *ngIf="userForm.controls.codeMeli.hasError(validation.type)  && (userForm.controls.codeMeli.dirty || userForm.controls.codeMeli.touched)">
+          <ion-icon name="information-circle-outline"></ion-icon>
+          <span>{{ validation.message }}</span>
+        </div>
+      </ng-container>
+    </div>
+    <ion-item class="rounded-pill-input">
+      <ion-input
+        fill="solid"
+        shape="round"
+        label="نام کاربری"
+        labelPlacement="floating"
+        placeholder="Enter text"
+        formControlName="userName"
+      ></ion-input>
+    </ion-item>
+    <div class="error-container">
+      <ng-container *ngFor="let validation of validations.userName">
+        <div class="error-message" *ngIf="userForm.controls.userName.hasError(validation.type)  && (userForm.controls.userName.dirty || userForm.controls.userName.touched)">
+          <ion-icon name="information-circle-outline"></ion-icon>
+          <span>{{ validation.message }}</span>
+        </div>
+      </ng-container>
+    </div>
+    <ion-item class="rounded-pill-input">
+      <ion-input
+        fill="solid"
+        label="شماره تلفن"
+        labelPlacement="floating"
+        placeholder="Enter text"
+        formControlName="phoneNumber"
+      ></ion-input>
+    </ion-item>
+    <div class="error-container">
+      <ng-container *ngFor="let validation of validations.phoneNumber">
+        <div class="error-message" *ngIf="userForm.controls.phoneNumber.hasError(validation.type)  && (userForm.controls.phoneNumber.dirty || userForm.controls.phoneNumber.touched)">
+          <ion-icon name="information-circle-outline"></ion-icon>
+          <span>{{ validation.message }}</span>
+        </div>
+      </ng-container>
+    </div>
+    <ion-item class="rounded-pill-input">
+      <ion-input
+        fill="solid"
+        label="رمزعبور"
+        labelPlacement="floating"
+        placeholder="Enter text"
+        formControlName="password"
+      ></ion-input>
+    </ion-item>
+    <div class="error-container">
+      <ng-container *ngFor="let validation of validations.password">
+        <div class="error-message" *ngIf="userForm.controls.password.hasError(validation.type)  && (userForm.controls.password.dirty || userForm.controls.password.touched)">
+          <ion-icon name="information-circle-outline"></ion-icon>
+          <span>{{ validation.message }}</span>
+        </div>
+      </ng-container>
+    </div>
+    <ion-item class="" >
+      <ion-button shape="round">ورود</ion-button>
+      <ion-button shape="round">ثبت نام</ion-button>
+    </ion-item>
+  </ion-list>
+</form>
+</ion-content>
+
+<ion-item>
+  <app-tabs></app-tabs>
+</ion-item>

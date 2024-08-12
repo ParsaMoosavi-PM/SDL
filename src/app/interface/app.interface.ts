@@ -1,12 +1,12 @@
 export interface User {
     id: number;
-    fullName: string;
+    userName: string;
     password: string;
-    email: string;
+    email?: string;
     phoneNumber: string;
-    codeMeli: string;
+    codeMeli?: string;
 }
-export interface UserLoginCredential{
+export interface UserLogin{
 
     codeMeli: string;
     password: string;

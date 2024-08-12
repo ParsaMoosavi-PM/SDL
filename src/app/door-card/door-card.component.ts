@@ -13,7 +13,6 @@ import { add, chevronBack, chevronDown,chevronBackCircle, chevronForward, chevro
 import { HeaderComponent } from '../header/header.component';
 import { TabsPage } from '../tabs/tabs.page';
 
-
 @Component({
   selector: 'app-door-card',
   templateUrl: './door-card.component.html',

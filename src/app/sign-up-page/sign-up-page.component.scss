@@ -1,0 +1,25 @@
+.rounded-pill-input {
+  --border-radius: 50px; /* Apply a large border-radius to achieve the pill shape */
+  --padding-start: 16px; /* Adjust padding for spacing */
+  --padding-end: 16px;
+  --background: #f3f4f6; /* Background color for the input */
+  --inner-border-radius: 50px; /* Ensures the inner element also has rounded corners */
+  --box-shadow: none; /* Optional: Remove any default shadows */
+}
+
+.rounded-pill-input ion-input {
+  --background: transparent; /* Transparent to inherit ion-item background */
+  --border-radius: 50px; /* Ensure input itself is also rounded */
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --height: 100%; /* Ensure the input covers the full height of the item */
+}
+
+.rounded-pill-input ion-item {
+  --border-radius: 50px; /* Ensures the item container is fully rounded */
+  --background: #f3f4f6; /* Match background color to ensure seamless look */
+  --padding-start: 16px; /* Padding to ensure the input text doesn't touch edges */
+  --padding-end: 16px;
+  --padding-top: 8px;
+  --padding-bottom: 8px;
+}
