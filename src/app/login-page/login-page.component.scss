@@ -3,3 +3,122 @@
 	background-color: rgba(0, 0, 0, 0);
 	color: white;
 }
+.styled-input ion-input {
+  font-size: 1rem;
+}
+
+.styled-button {
+  margin: 10px 0;
+}
+
+@media (min-width: 768px) {
+  .styled-input ion-input {
+    font-size: 0.9rem; /* Smaller font size for medium screens */
+  }
+
+  .styled-button {
+    font-size: 0.9rem; /* Smaller button size for medium screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .styled-input ion-input {
+    font-size: 1rem; /* Even smaller font size for large screens */
+  }
+
+  .styled-button {
+    font-size: 1rem; /* Even smaller button size for large screens */
+  }
+}
+.rounded-pill-button {
+  --background: linear-gradient(90deg, #d3d3d3, #a9a9a9); /* Gray gradient */
+  --border-radius: 50px; /* Makes the button rounded like a pill */
+  --padding-start: 16px; /* Adjusts padding to make the button more pill-like */
+  --padding-end: 16px;
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+  --color: #fff; /* Text color */
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  text-transform: uppercase; /* Optional: Makes the text uppercase */
+  font-weight: bold; /* Optional: Bold text */
+  width: 100%;
+}
+
+.rounded-pill-button:hover {
+  --background: linear-gradient(90deg, #a9a9a9, #d3d3d3); /* Reverse gradient on hover */
+  --box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Slightly bigger shadow on hover */
+}
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  //--background-size: 50vw;
+  --background-size: unquote('min(100vw, 40em)');
+}
+
+html {
+  font-size: calc(100% + 0.5vw);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition-duration: 0.001s !important;
+  }
+}
+
+@keyframes background-move {
+  0% { background-position: 0 0, 0 0; }
+  100% {
+    background-position: 100vw 0, 0 0;
+    background-position: unquote('max(100vw, 40em)')  0, 0 0;
+  }
+}
+
+.input-group {
+  width: 100%;
+  max-width: 20em;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+
+  @supports (mix-blend-mode: darken) {
+    position: relative;
+    mix-blend-mode: lighten;
+  }
+
+
+
+  &__input {
+
+    color: #000000;
+    font-size: 1.25rem;
+    line-height: 2;
+    border-style: none;
+    outline: none;
+    // height calc line-height + (vertical-padding * 2) + (vertical-border * 2)
+    height: calc(1em + 1.6em + 0.5em);
+    width: 100%;
+    padding-left: 100px;
+    border: 0.25em solid transparent;
+    background-image: linear-gradient(#ffffff, #fff),
+      linear-gradient(120deg, #f09 0%, #0ff 50%, #9f0 100%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    border-radius: 1.8em;
+    background-size: 200% 100%;
+    transition: background-position 0.8s ease-out;
+
+    &:hover {
+      background-position: 100% 0;
+    }
+
+    &:focus {
+      outline: 2px dashed #ad2b89;
+      outline-offset: 0.5em;
+    }
+  }
+}
+
+

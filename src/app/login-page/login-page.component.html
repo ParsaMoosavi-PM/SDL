@@ -1,27 +1,37 @@
-<app-header></app-header>
-<ion-content>
-  <ion-list>
-    <ion-item>
-      <ion-input
-        fill="solid"
-        label="کد ملی"
-        labelPlacement="floating"
-        placeholder="Enter text"
-      ></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input
-        label="رمز عبور"
-        labelPlacement="floating"
-        placeholder="Enter text"
-      ></ion-input>
-    </ion-item>
-    <ion-buttons>
-      <ion-button>ورود</ion-button>
-      <ion-button>ثبت نام</ion-button>
-    </ion-buttons>
-  </ion-list>
+<ion-content fill="solid" class="bg">
+  <ion-grid style="width: 100vw;" fill="solid">
+    <ion-row class="ion-justify-content-center ion-padding">
+      <ion-col size="12" sizeMd="6" sizeLg="4">
+        <ion-list>
+          <ion-item class="styled-input">
+            <ion-input
+              label="کد ملی"
+              labelPlacement="floating"
+              placeholder="Enter text"
+              id="myInput" class="input-group__input" for="myInput"
+            ></ion-input>
+          </ion-item>
+          <ion-item class="styled-input">
+            <ion-input style="padding: 10px;"
+              label="رمز عبور"
+              labelPlacement="floating"
+              placeholder="Enter text"
+              id="myInput" class="input-group__input" for="myInput"
+            ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-button expand="block" class="rounded-pill-button"
+              >ورود</ion-button
+            >
+          </ion-item>
+          <ion-item>
+            <ion-button expand="block" class="rounded-pill-button"
+              >ثبت نام</ion-button
+            >
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
-<ion-item>
-  <app-tabs></app-tabs>
-</ion-item>
+

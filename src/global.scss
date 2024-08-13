@@ -34,8 +34,15 @@
 
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
-body, ion-app {
+ion-app {
   --ion-background-color: linear-gradient(to bottom right, #ff7e5f, #feb47b); /* Example gradient */
-  background-size: cover;
-  height: 100%;
+
+}
+ion-item, ion-button, ion-input,ion-grid, ion-list{
+  --ion-background-color: transparent;
+}
+
+.bg{
+  --ion-background-color: linear-gradient(to bottom right, #ff7e5f, #feb47b); /* Example gradient */
+
 }
